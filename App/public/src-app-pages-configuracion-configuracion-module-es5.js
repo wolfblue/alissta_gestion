@@ -439,13 +439,40 @@
         }, {
           key: "rateApp",
           value: function rateApp() {
-            this.appRate.setPreferences({
-              storeAppURL: {
-                ios: '1306274186',
-                android: 'market://details?id=co.gov.alissta'
-              }
-            });
-            this.appRate.promptForRating(true);
+            var _this2 = this;
+
+            try {
+              this.appRate.preferences = {
+                displayAppName: 'Alissta Gestión',
+                usesUntilPrompt: 4,
+                promptAgainForEachNewVersion: true,
+                storeAppURL: {
+                  ios: '1306274186',
+                  android: 'market://details?id=co.gov.alissta'
+                },
+                customLocale: {
+                  title: 'Reseña %@',
+                  message: 'Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!',
+                  cancelButtonLabel: 'No, gracias',
+                  laterButtonLabel: 'Recordarme más tarde',
+                  rateButtonLabel: 'Escribir reseña ahora',
+                  yesButtonLabel: 'Sí',
+                  noButtonLabel: 'No',
+                  appRatePromptTitle: '¿Te gusta %@?',
+                  feedbackPromptTitle: '¿Darías tu opinión?'
+                },
+                callbacks: {
+                  onButtonClicked: function onButtonClicked(buttonIndex) {
+                    if (buttonIndex === 1) {
+                      _this2.appRate.promptForRating(true);
+                    }
+                  }
+                },
+                simpleMode: true
+              };
+            } catch (error) {
+              console.log("Developer error: " + error);
+            }
             /*
             console.log(this.appRate);
             this.appRate.preferences.storeAppURL = {
@@ -466,6 +493,7 @@
                   this.appRate.preferences.simpleMode = true;
             this.appRate.promptForRating(true);
             */
+
           }
         }, {
           key: "logout",
