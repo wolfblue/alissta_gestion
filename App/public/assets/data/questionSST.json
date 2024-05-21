@@ -1,0 +1,20 @@
+{
+  "desc_actividad": [
+    {
+      "strDescripcion": "Tipo de Trabajo",
+      "strRespuesta": null
+    },
+    {
+      "strDescripcion": "Antes de la actividad",
+      "strRespuesta": null
+    },
+    {
+      "strDescripcion": "Durante la actividad",
+      "strRespuesta": null
+    },
+    {
+      "strDescripcion": "Después de la actividad",
+      "strRespuesta": null
+    }
+  ]
+}

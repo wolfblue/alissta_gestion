@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Registro Permisos de Trabajo",
+    "sub-list": [
+      {
+        "title": "Registro Permiso",
+        "url": "/registro-permiso"
+      },
+      {
+        "title": "Permisos Pendientes",
+        "url": "/permisos-pendientes"
+      },
+      {
+        "title": "Liberar Trabajadores",
+        "url": "/liberar-trabajadores"
+      }
+    ]
+  }
+]
