@@ -2,6 +2,14 @@
   cordova.define('cordova/plugin_list', function(require, exports, module) {
     module.exports = [
       {
+          "id": "cordova-plugin-apprate.AppRate",
+          "file": "plugins/cordova-plugin-apprate/www/AppRate.js",
+          "pluginId": "cordova-plugin-apprate",
+        "clobbers": [
+          "AppRate"
+        ]
+        },
+      {
           "id": "cordova-plugin-camera.Camera",
           "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
           "pluginId": "cordova-plugin-camera",
@@ -135,15 +143,6 @@
           "pluginId": "cordova-sqlite-storage",
         "clobbers": [
           "SQLitePlugin"
-        ]
-        },
-      {
-          "id": "cordova-plugin-apprate.AppRate",
-          "file": "plugins/cordova-plugin-apprate/www/AppRate.js",
-          "pluginId": "cordova-plugin-apprate",
-        "clobbers": [
-          "AppRate",
-          "window.AppRate"
         ]
         },
       {
@@ -294,8 +293,8 @@
       "cordova-plugin-telerik-imagepicker": "2.3.5",
       "cordova-sqlite-storage": "6.1.0",
       "cordova.plugins.diagnostic": "6.1.1",
-      "onesignal-cordova-plugin": "3.3.1",
-      "cordova-plugin-apprate": "1.7.2",
+      "onesignal-cordova-plugin": "3.3.2",
+      "cordova-plugin-apprate": "1.5.0",
       "cordova-plugin-dialogs": "2.0.2"
     };
     // BOTTOM OF METADATA

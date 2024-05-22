@@ -1,6 +1,6 @@
 cordova.define("cordova-plugin-apprate.storage", function(require, exports, module) { 
 module.exports = {
-  get: function(key) {
+  get: function (key) {
     return new Promise(function(resolve, reject) {
       NativeStorage.getItem(key, resolve, function(e) {
         if (e.code === 2) {
@@ -11,7 +11,7 @@ module.exports = {
       })
     })
   },
-  set: function(key, value) {
+  set: function (key, value) {
     return new Promise(function(resolve, reject) {
       NativeStorage.setItem(key, value, resolve, reject);
     })

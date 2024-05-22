@@ -440,10 +440,27 @@
           key: "rateApp",
           value: function rateApp() {
             try {
-              this.appRate.setPreferences({
+              this.appRate.preferences.storeAppURL = {
+                ios: '1306274186',
+                android: 'market://details?id=co.gov.alissta'
+              };
+              this.appRate.preferences.customLocale = {
+                title: 'Reseña %@',
+                message: 'Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!',
+                cancelButtonLabel: 'No, gracias',
+                laterButtonLabel: 'Recordarme más tarde',
+                rateButtonLabel: 'Escribir reseña ahora',
+                yesButtonLabel: 'Sí',
+                noButtonLabel: 'No',
+                appRatePromptTitle: '¿Te gusta %@?',
+                feedbackPromptTitle: '¿Darías tu opinión?'
+              };
+              this.appRate.preferences.simpleMode = true;
+              this.appRate.promptForRating(true);
+              /*this.appRate.preferences({
                 displayAppName: 'Alissta Gestión',
                 usesUntilPrompt: 1,
-                promptAgainForEachNewVersion: true,
+                promptAgainForEachNewVersion : true,
                 storeAppURL: {
                   ios: '1306274186',
                   android: 'market://details?id=co.gov.alissta'
@@ -461,15 +478,16 @@
                 },
                 simpleMode: true,
                 callbacks: {
-                  onRateDialogShow: function onRateDialogShow(callback) {
+                  onRateDialogShow: function(callback){
                     console.log('rate dialog shown!');
                   },
-                  onButtonClicked: function onButtonClicked(buttonIndex) {
+                  onButtonClicked: function(buttonIndex){
                     console.log('Selected index: -> ' + buttonIndex);
                   }
                 }
               });
-              this.appRate.promptForRating(true);
+                      this.appRate.promptForRating(true);*/
+
               /*this.appRate.setPreferences({
                 displayAppName: 'Alissta Gestión',
                 usesUntilPrompt: 1,

@@ -1412,7 +1412,15 @@
         }
 
         HTMLCanvasElementLuminanceSource.makeBufferFromCanvasImageData = function (canvas) {
-          var canvasCtx = canvas.getContext('2d');
+          var canvasCtx;
+
+          try {
+            canvasCtx = canvas.getContext('2d', {
+              willReadFrequently: true
+            });
+          } catch (e) {
+            canvasCtx = canvas.getContext('2d');
+          }
 
           if (!canvasCtx) {
             throw new Error('Couldn\'t get canvas context.');
@@ -3602,7 +3610,16 @@
            * The HTML canvas element context.
            */
 
-          var captureCanvasContext = captureCanvas.getContext('2d'); // cannot proceed w/o this
+          var captureCanvasContext;
+
+          try {
+            captureCanvasContext = captureCanvas.getContext('2d', {
+              willReadFrequently: true
+            });
+          } catch (e) {
+            captureCanvasContext = captureCanvas.getContext('2d');
+          } // cannot proceed w/o this
+
 
           if (!captureCanvasContext) {
             throw new Error('Couldn\'t create canvas for visual element scan.');
