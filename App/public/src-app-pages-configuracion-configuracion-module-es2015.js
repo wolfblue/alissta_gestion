@@ -256,7 +256,7 @@ let ConfiguracionPage = class ConfiguracionPage {
     }
     rateApp() {
         try {
-            this.appRate.preferences = {
+            this.appRate.setPreferences({
                 displayAppName: 'Alissta Gestión',
                 usesUntilPrompt: 4,
                 promptAgainForEachNewVersion: true,
@@ -275,15 +275,9 @@ let ConfiguracionPage = class ConfiguracionPage {
                     appRatePromptTitle: '¿Te gusta %@?',
                     feedbackPromptTitle: '¿Darías tu opinión?'
                 },
-                callbacks: {
-                    onButtonClicked: (buttonIndex) => {
-                        if (buttonIndex === 1) {
-                            this.appRate.promptForRating(true);
-                        }
-                    },
-                },
                 simpleMode: true
-            };
+            });
+            this.appRate.promptForRating(true);
         }
         catch (error) {
             console.log("Developer error: " + error);

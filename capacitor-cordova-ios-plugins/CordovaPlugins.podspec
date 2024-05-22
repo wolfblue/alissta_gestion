@@ -13,6 +13,6 @@
     s.dependency 'CapacitorCordova'
     s.swift_version  = '5.1'
     s.weak_frameworks = 'ImageIO', 'AudioToolbox'
-    s.frameworks = 'StoreKit', 'CoreLocation', 'CoreGraphics', 'AssetsLibrary', 'MobileCoreServices', 'AVFoundation', 'Accelerate', 'Security', 'Photos', 'SystemConfiguration', 'QuartzCore', 'CoreBluetooth', 'UserNotifications', 'Contacts', 'AddressBook', 'EventKit', 'CoreMotion'
+    s.frameworks = 'CoreLocation', 'CoreGraphics', 'AssetsLibrary', 'MobileCoreServices', 'AVFoundation', 'Accelerate', 'Security', 'Photos', 'SystemConfiguration', 'QuartzCore', 'CoreBluetooth', 'UserNotifications', 'Contacts', 'AddressBook', 'EventKit', 'CoreMotion', 'StoreKit'
     s.compiler_flags = '-w -w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=4096'
   end

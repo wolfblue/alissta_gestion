@@ -147,18 +147,6 @@
         ]
         },
       {
-          "id": "cordova-plugin-apprate.locales",
-          "file": "plugins/cordova-plugin-apprate/www/locales.js",
-          "pluginId": "cordova-plugin-apprate",
-        "runs": true
-        },
-      {
-          "id": "cordova-plugin-apprate.storage",
-          "file": "plugins/cordova-plugin-apprate/www/storage.js",
-          "pluginId": "cordova-plugin-apprate",
-        "runs": true
-        },
-      {
           "id": "cordova-plugin-nativestorage.LocalStorageHandle",
           "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
           "pluginId": "cordova-plugin-nativestorage"
@@ -182,6 +170,18 @@
           "id": "onesignal-cordova-plugin.OSNotification",
           "file": "plugins/onesignal-cordova-plugin/dist/OSNotification.js",
           "pluginId": "onesignal-cordova-plugin"
+        },
+      {
+          "id": "cordova-plugin-apprate.locales",
+          "file": "plugins/cordova-plugin-apprate/www/locales.js",
+          "pluginId": "cordova-plugin-apprate",
+        "runs": true
+        },
+      {
+          "id": "cordova-plugin-apprate.storage",
+          "file": "plugins/cordova-plugin-apprate/www/storage.js",
+          "pluginId": "cordova-plugin-apprate",
+        "runs": true
         },
       {
           "id": "cordova.plugins.diagnostic.Diagnostic",
@@ -284,10 +284,8 @@
     // TOP OF METADATA
     {
       "cordova-plugin-app-version": "0.1.14",
-      "cordova-plugin-apprate": "1.7.2",
       "cordova-plugin-camera": "4.1.0",
       "cordova-plugin-device": "2.1.0",
-      "cordova-plugin-dialogs": "2.0.2",
       "cordova-plugin-fingerprint-aio": "3.0.1",
       "cordova-plugin-geolocation": "4.1.0",
       "cordova-plugin-inappbrowser": "4.1.0",
@@ -296,7 +294,9 @@
       "cordova-plugin-telerik-imagepicker": "2.3.5",
       "cordova-sqlite-storage": "6.1.0",
       "cordova.plugins.diagnostic": "6.1.1",
-      "onesignal-cordova-plugin": "3.3.1"
+      "onesignal-cordova-plugin": "3.3.1",
+      "cordova-plugin-apprate": "1.7.2",
+      "cordova-plugin-dialogs": "2.0.2"
     };
     // BOTTOM OF METADATA
     });

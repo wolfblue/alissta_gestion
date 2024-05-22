@@ -439,10 +439,8 @@
         }, {
           key: "rateApp",
           value: function rateApp() {
-            var _this2 = this;
-
             try {
-              this.appRate.preferences = {
+              this.appRate.setPreferences({
                 displayAppName: 'Alissta Gestión',
                 usesUntilPrompt: 4,
                 promptAgainForEachNewVersion: true,
@@ -461,15 +459,9 @@
                   appRatePromptTitle: '¿Te gusta %@?',
                   feedbackPromptTitle: '¿Darías tu opinión?'
                 },
-                callbacks: {
-                  onButtonClicked: function onButtonClicked(buttonIndex) {
-                    if (buttonIndex === 1) {
-                      _this2.appRate.promptForRating(true);
-                    }
-                  }
-                },
                 simpleMode: true
-              };
+              });
+              this.appRate.promptForRating(true);
             } catch (error) {
               console.log("Developer error: " + error);
             }
