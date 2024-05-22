@@ -917,6 +917,12 @@
       var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ./app.component */
       "./src/app.component.ts");
+      /* harmony import */
+
+
+      var _ionic_native_app_rate_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @ionic-native/app-rate/ngx */
+      "./node_modules/@ionic-native/app-rate/__ivy_ngcc__/ngx/index.js");
 
       var AppModule = /*#__PURE__*/_createClass(function AppModule() {
         _classCallCheck(this, AppModule);
@@ -925,7 +931,8 @@
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"].forRoot(), _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["IonicStorageModule"].forRoot(), src_app_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
+        providers: [_ionic_native_app_rate_ngx__WEBPACK_IMPORTED_MODULE_8__["AppRate"]]
       })], AppModule);
       /***/
     },

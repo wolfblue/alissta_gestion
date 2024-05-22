@@ -238,6 +238,12 @@
       var _ionic_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @ionic/storage */
       "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
+      /* harmony import */
+
+
+      var _ionic_native_app_rate_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ionic-native/app-rate/ngx */
+      "./node_modules/@ionic-native/app-rate/__ivy_ngcc__/ngx/index.js");
 
       var AutenticacionPageModule = /*#__PURE__*/_createClass(function AutenticacionPageModule() {
         _classCallCheck(this, AutenticacionPageModule);
@@ -245,7 +251,7 @@
 
       AutenticacionPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [src_app_shared_module__WEBPACK_IMPORTED_MODULE_2__["SharedModule"], _autenticacion_routing_module__WEBPACK_IMPORTED_MODULE_3__["AutenticacionPageRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_6__["IonicStorageModule"].forRoot()],
-        providers: [_ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_5__["FingerprintAIO"]],
+        providers: [_ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_5__["FingerprintAIO"], _ionic_native_app_rate_ngx__WEBPACK_IMPORTED_MODULE_7__["AppRate"]],
         declarations: [_autenticacion_page__WEBPACK_IMPORTED_MODULE_4__["AutenticacionPage"]]
       })], AutenticacionPageModule);
       /***/

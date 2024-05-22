@@ -265,7 +265,7 @@ let ConfiguracionPage = class ConfiguracionPage {
                     android: 'market://details?id=co.gov.alissta'
                 },
                 customLocale: {
-                    title: 'Reseña %@',
+                    title: 'Hola, Reseña %@',
                     message: 'Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!',
                     cancelButtonLabel: 'No, gracias',
                     laterButtonLabel: 'Recordarme más tarde',
@@ -275,9 +275,40 @@ let ConfiguracionPage = class ConfiguracionPage {
                     appRatePromptTitle: '¿Te gusta %@?',
                     feedbackPromptTitle: '¿Darías tu opinión?'
                 },
-                simpleMode: true
+                simpleMode: true,
+                callbacks: {
+                    onRateDialogShow: function (callback) {
+                        console.log('rate dialog shown!');
+                    },
+                    onButtonClicked: function (buttonIndex) {
+                        console.log('Selected index: -> ' + buttonIndex);
+                    }
+                }
             });
             this.appRate.promptForRating(true);
+            /*this.appRate.setPreferences({
+              displayAppName: 'Alissta Gestión',
+              usesUntilPrompt: 1,
+              promptAgainForEachNewVersion : true,
+              storeAppURL: {
+                ios: '1306274186',
+                android: 'market://details?id=co.gov.alissta'
+              },
+              customLocale: {
+                title: 'Reseña %@',
+                message: 'Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!',
+                cancelButtonLabel: 'No, gracias',
+                laterButtonLabel: 'Recordarme más tarde',
+                rateButtonLabel: 'Escribir reseña ahora',
+                yesButtonLabel: 'Sí',
+                noButtonLabel: 'No',
+                appRatePromptTitle: '¿Te gusta %@?',
+                feedbackPromptTitle: '¿Darías tu opinión?'
+              },
+              simpleMode: true
+            });
+      
+            this.appRate.promptForRating(true);*/
         }
         catch (error) {
             console.log("Developer error: " + error);
