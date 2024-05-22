@@ -442,7 +442,7 @@
             try {
               this.appRate.setPreferences({
                 displayAppName: 'Alissta Gestión',
-                usesUntilPrompt: 4,
+                usesUntilPrompt: 1,
                 promptAgainForEachNewVersion: true,
                 storeAppURL: {
                   ios: '1306274186',
