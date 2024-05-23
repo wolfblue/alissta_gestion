@@ -130,6 +130,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_commons_preferences_keys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/commons/preferences-keys */ "./src/app/commons/preferences-keys.ts");
 /* harmony import */ var src_app_storage_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/storage.service */ "./src/app/storage.service.ts");
 /* harmony import */ var src_app_services_SST_menu_sstservice_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/services/SST/menu-sstservice.service */ "./src/app/services/SST/menu-sstservice.service.ts");
+/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/__ivy_ngcc__/ngx/index.js");
+
 
 
 
@@ -140,16 +142,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ConfiguracionPage = class ConfiguracionPage {
-    constructor(oneSignal, appRate, router, storageService, toastController, munuSSTService) {
+    constructor(oneSignal, appRate, router, storageService, toastController, munuSSTService, iab) {
         this.oneSignal = oneSignal;
         this.appRate = appRate;
         this.router = router;
         this.storageService = storageService;
         this.toastController = toastController;
         this.munuSSTService = munuSSTService;
+        this.iab = iab;
         this.isFingerFaceAvailable = false;
         this.menuSST = false;
         this.showBtnSST = false;
+        this.options = {
+            location: 'yes',
+            hidden: 'no',
+            clearcache: 'yes',
+            clearsessioncache: 'yes',
+            zoom: 'yes',
+            hardwareback: 'yes',
+            mediaPlaybackRequiresUserAction: 'no',
+            shouldPauseOnSuspend: 'no',
+            closebuttoncaption: 'Cerrar',
+            disallowoverscroll: 'no',
+            toolbar: 'yes',
+            enableViewportScale: 'no',
+            allowInlineMediaPlayback: 'no',
+            presentationstyle: 'fullscreen',
+            fullscreen: 'yes',
+        };
     }
     ngOnInit() {
         const notificaciones = localStorage.getItem(src_app_commons_preferences_keys__WEBPACK_IMPORTED_MODULE_6__["NOTIFICACIONES"]) === 'true';
@@ -254,7 +274,7 @@ let ConfiguracionPage = class ConfiguracionPage {
     pushAcercaDe() {
         this.router.navigateByUrl('settings/about');
     }
-    rateApp() {
+    rateAppOld() {
         try {
             this.appRate.preferences = {
                 usesUntilPrompt: 1,
@@ -393,6 +413,45 @@ let ConfiguracionPage = class ConfiguracionPage {
         localStorage.setItem('btnmenuSST', String(this.showBtnSST));
         this.munuSSTService.changeMenuSST(this.showBtnSST);
     }
+    rateApp() {
+        var userAgent = navigator.userAgent;
+        var dispositivo = "ios";
+        if (userAgent.split("Android").length > 1) {
+            dispositivo = "android";
+        }
+        if (dispositivo == "android") {
+            this.appRate.preferences = {
+                usesUntilPrompt: 1,
+                useLanguage: 'es',
+                displayAppName: 'Alissta Gestión',
+                promptAgainForEachNewVersion: true,
+                inAppReview: true,
+                storeAppURL: {
+                    ios: '1306274186',
+                    android: 'market://details?id=co.gov.alissta',
+                },
+                customLocale: {
+                    title: 'Reseña %@',
+                    message: 'Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!',
+                    cancelButtonLabel: 'No, gracias',
+                    laterButtonLabel: 'Recordarme más tarde',
+                    rateButtonLabel: 'Escribir reseña ahora',
+                    yesButtonLabel: 'Sí',
+                    noButtonLabel: 'No',
+                    appRatePromptTitle: '¿Te gusta %@?',
+                    feedbackPromptTitle: '¿Darías tu opinión?',
+                },
+                openUrl: function (url) {
+                    window.open(url, '_blank', 'location=yes');
+                },
+            };
+            this.appRate.promptForRating(true);
+        }
+        else {
+            let url = 'https://apps.apple.com/us/app/alissta/id1306274186';
+            this.iab.create(url, '_blank', this.options);
+        }
+    }
 };
 ConfiguracionPage.ctorParameters = () => [
     { type: _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_5__["OneSignal"] },
@@ -400,7 +459,8 @@ ConfiguracionPage.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
     { type: src_app_storage_service__WEBPACK_IMPORTED_MODULE_7__["StorageService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"] },
-    { type: src_app_services_SST_menu_sstservice_service__WEBPACK_IMPORTED_MODULE_8__["MenuSSTService"] }
+    { type: src_app_services_SST_menu_sstservice_service__WEBPACK_IMPORTED_MODULE_8__["MenuSSTService"] },
+    { type: _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_9__["InAppBrowser"] }
 ];
 ConfiguracionPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

@@ -749,7 +749,7 @@
             var _this = this;
 
             /* cambiar Environments en DataService SST : PATH */
-            this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].Prod);
+            this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].Test);
             this.platform.ready().then(function () {
               // this.checkDarkTheme();
               _this.statusBar.styleDefault();
