@@ -512,7 +512,11 @@ let ActosCondicionesInsegurasPage = class ActosCondicionesInsegurasPage {
                 const image = yield _capacitor_camera__WEBPACK_IMPORTED_MODULE_16__["Camera"].getPhoto({
                     quality: 90,
                     allowEditing: false,
-                    resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_16__["CameraResultType"].Base64
+                    resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_16__["CameraResultType"].Base64,
+                    promptLabelHeader: 'Evidencia',
+                    promptLabelCancel: 'Cancelar',
+                    promptLabelPhoto: 'Galería',
+                    promptLabelPicture: 'Camara'
                 });
                 this.base64Img = image.base64String;
                 this.imageSelected = true;
