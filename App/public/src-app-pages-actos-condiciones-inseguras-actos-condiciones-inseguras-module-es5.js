@@ -746,14 +746,23 @@
                     return _context3.abrupt("return");
 
                   case 4:
-                    _context3.next = 6;
+                    if (!(this.imageSelected == false)) {
+                      _context3.next = 7;
+                      break;
+                    }
+
+                    this.alert('Alerta', '', 'La evidencia es obligatoria para generar el reporte.');
+                    return _context3.abrupt("return");
+
+                  case 7:
+                    _context3.next = 9;
                     return this.utils.presentLoading();
 
-                  case 6:
-                    _context3.next = 8;
+                  case 9:
+                    _context3.next = 11;
                     return this.getDataFromInputs();
 
-                  case 8:
+                  case 11:
                     this.actoCondicionInsegura.imagen = this.base64Img;
                     console.log('Reportar: ' + JSON.stringify(this.actoCondicionInsegura));
                     this.actoCondicionInseguraService.post(this.actoCondicionInsegura).subscribe(function (result) {
@@ -772,7 +781,7 @@
                       _this5.utils.dismissLoading();
                     });
 
-                  case 11:
+                  case 14:
                   case "end":
                     return _context3.stop();
                 }

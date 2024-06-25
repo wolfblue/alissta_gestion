@@ -121,6 +121,7 @@ let EppDetallePage = class EppDetallePage {
     }
     ngOnInit() {
         this.epp = this.router.getCurrentNavigation().extras.state.epp;
+        console.log(this.epp);
         this.urlImgEpp = this.router.getCurrentNavigation().extras.state.urlImgEpp;
     }
     ionViewWillEnter() {

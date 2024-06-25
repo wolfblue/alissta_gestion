@@ -580,7 +580,7 @@ let AppComponent = class AppComponent {
     }
     initializeApp() {
         /* cambiar Environments en DataService SST : PATH */
-        this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].Prod);
+        this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].PreProd);
         this.platform.ready().then(() => {
             // this.checkDarkTheme();
             this.statusBar.styleDefault();
@@ -4676,7 +4676,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\FUENTES_APP\alissta_gestion\Trunk\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\ASUS\Desktop\Proyectos\ADA\Desarrollo\alissta_gestion\src\main.ts */"./src/main.ts");
 
 
 /***/ })

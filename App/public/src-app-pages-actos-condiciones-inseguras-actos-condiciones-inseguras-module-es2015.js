@@ -431,6 +431,11 @@ let ActosCondicionesInsegurasPage = class ActosCondicionesInsegurasPage {
                 this.alert('Alerta', '', 'Los campos señalados son requeridos.');
                 return;
             }
+            //  Evidencia obligatoria
+            if (this.imageSelected == false) {
+                this.alert('Alerta', '', 'La evidencia es obligatoria para generar el reporte.');
+                return;
+            }
             yield this.utils.presentLoading();
             yield this.getDataFromInputs();
             this.actoCondicionInsegura.imagen = this.base64Img;

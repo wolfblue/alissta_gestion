@@ -264,7 +264,14 @@
                     id: result[i].Pk_Id_EPP,
                     nombre: result[i].NombreEPP,
                     uso: result[i].Uso,
-                    image: ''
+                    image: '',
+                    parteCuerpoProteger: result[i].ParteCuerpo,
+                    riesgoControlado: result[i].Clasificacion_De_Peligro,
+                    especificacionTecnica: result[i].EspecificacionTecnica,
+                    mantenimiento: result[i].Mantenimiento,
+                    vidaUtil: result[i].VidaUtil,
+                    reposicion: result[i].Reposicion,
+                    disposicionFinal: result[i].DisposicionFinal
                   };
 
                   _this.epps.push(epps);
