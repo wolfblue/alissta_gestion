@@ -749,7 +749,7 @@
             var _this = this;
 
             /* cambiar Environments en DataService SST : PATH */
-            this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].Prod);
+            this.context.setEnvironment(src_app_commons_environment__WEBPACK_IMPORTED_MODULE_6__["Environments"].PreProd);
             this.platform.ready().then(function () {
               // this.checkDarkTheme();
               _this.statusBar.styleDefault();
@@ -7980,7 +7980,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\FUENTES_APP\alissta_gestion\Trunk\src\main.ts */
+      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\Code\alissta_gestion\Trunk\src\main.ts */
       "./src/main.ts");
       /***/
     }

@@ -526,11 +526,11 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\FUENTES_APP\alissta_gestion\Trunk\src\theme\variables.scss */
+      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\Code\alissta_gestion\Trunk\src\theme\variables.scss */
       "./src/theme/variables.scss");
 
       module.exports = __webpack_require__(
-      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\FUENTES_APP\alissta_gestion\Trunk\src\global.scss */
+      /*! C:\Users\e_a_a\Desktop\Proyectos\ADA\Repositorio\Code\alissta_gestion\Trunk\src\global.scss */
       "./src/global.scss");
       /***/
     }
